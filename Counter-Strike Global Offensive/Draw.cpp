@@ -49,7 +49,7 @@ void cDraw::String( int x, int y, unsigned long font, Color color, const char* t
 	I::Surface->drawPrintText( wcstring, wcslen( wcstring ) );
 }
 
-void cDraw::verticalGradient( int x, int y, int w, int h, Color startColor, Color endColor )
+void cDraw::verticalGradient( int x, int y, int w, int h, Color startColor, Color endColor ) // Credits: Synraw
 {
 	filledRectangle( x, y, w, h, startColor );
 	BYTE first = endColor.r;
@@ -65,7 +65,7 @@ void cDraw::verticalGradient( int x, int y, int w, int h, Color startColor, Colo
 }
 
 
-void cDraw::Polygon( int count, vertexT* Vertexes, Color color ) {
+void cDraw::Polygon( int count, vertexT* Vertexes, Color color ) { // Credits: Synraw
 	static int Texture = I::Surface->createNewTexture( );
 	unsigned char buffer[ 4 ] = { 255, 255, 255, 255 };
 	I::Surface->drawSetTextureColor( Texture, buffer, 1, 1 );
